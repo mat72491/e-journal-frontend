@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-const LoginForm = () => {
+const LoginForm = (props) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
@@ -16,10 +16,11 @@ const LoginForm = () => {
         password,
       });
 
-      // Save the JWT token to localStorage
+     
       localStorage.setItem('token', response.data.access);
 
-      // Redirect to dashboard
+      props.onLogin()
+
       navigate('/dashboard');
     } catch (error) {
       console.error('Error logging in:', error);

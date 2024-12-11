@@ -1,22 +1,24 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Use Link for routing without reloading the page
-import LogoutButton from './LogoutButton'; // Import LogoutButton component
+import { Link } from 'react-router-dom'; 
 
-function Navbar() {
+
+function Navbar(props) {
   return (
     <nav>
       <ul>
-        {/* Add navigation links */}
         <li><Link to="/">Home</Link></li>
         <li><Link to="/dashboard">Dashboard</Link></li>
         <li>
-          <Link to="/write-entry">Write Entry</Link> {/* Link to Write Entry page */}
+          <Link to="/write-entry">Write Entry</Link> 
         </li>
-        {localStorage.getItem('token') && (
+        <li>
+          <Link to="/entries">My Entries</Link> 
+        </li>
+
           <li>
-            <LogoutButton /> {/* Add logout button */}
+            <button onClick={props.onLogout}>Logout</button>
           </li>
-        )}
+  
       </ul>
     </nav>
   );

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import LoginForm from './LoginForm';
 import RegisterForm from './RegisterForm';
 
-function LandingPage() {
+function LandingPage(props) {
   const [isLogin, setIsLogin] = useState(true);
 
   const toggleForm = () => {
@@ -12,14 +12,16 @@ function LandingPage() {
   return (
     <div>
       <h1>Welcome to the Journal App</h1>
-
       <div>
         <button onClick={toggleForm}>
-          {isLogin ? 'Register Here' : 'Switch to Login'}
+          {isLogin ? 'Switch to Register' : 'Switch to Login'}
         </button>
       </div>
-
-      {isLogin ? <LoginForm /> : <RegisterForm />}
+      {isLogin ? (
+        <LoginForm onLogin={props.onLogin} /> 
+      ) : (
+        <RegisterForm /> 
+      )}
     </div>
   );
 }
