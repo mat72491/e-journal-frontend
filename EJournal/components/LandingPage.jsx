@@ -11,7 +11,7 @@ function LandingPage(props) {
 
   return (
     <div>
-      <h1>Welcome to the Journal App</h1>
+      <h1>My Journal</h1>
       <div>
         <button onClick={toggleForm}>
           {isLogin ? 'Switch to Register' : 'Switch to Login'}

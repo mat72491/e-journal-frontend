@@ -3,11 +3,10 @@ import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const EntryDetailPage = () => {
-  const { id } = useParams();  // Get the entry ID from the URL
+  const { id } = useParams();  
   const navigate = useNavigate();
   const [entry, setEntry] = useState(null);
-  
-  // Function to fetch the entry data
+
   const fetchEntry = async () => {
     try {
       const token = localStorage.getItem('token');
@@ -22,10 +21,10 @@ const EntryDetailPage = () => {
     }
   };
 
-  // Fetch the entry when the component mounts or when `id` changes
+
   useEffect(() => {
     fetchEntry();
-  }, [id]);  // Dependency on `id` ensures it re-fetches when the ID changes
+  }, [id]);  
 
   const handleDelete = async () => {
     try {

@@ -7,7 +7,7 @@ const HomePage = () => {
   const [error, setError] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
 
-  // Handle input changes
+
   const handleChange = (e, formType) => {
     const { name, value } = e.target;
     if (formType === 'login') {
@@ -17,7 +17,6 @@ const HomePage = () => {
     }
   };
 
-  // Handle login form submission
   const handleLogin = async (e) => {
     e.preventDefault();
     setError('');
@@ -30,7 +29,7 @@ const HomePage = () => {
     }
   };
 
-  // Handle registration form submission
+ 
   const handleRegister = async (e) => {
     e.preventDefault();
     setError('');
@@ -44,7 +43,7 @@ const HomePage = () => {
 
   return (
     <div style={styles.container}>
-      <h1>Welcome to the E-Journal App</h1>
+      <h1>Welcome to Your Journal</h1>
       <div style={styles.formsContainer}>
         {/* Login Form */}
         <form style={styles.form} onSubmit={handleLogin}>
@@ -99,14 +98,12 @@ const HomePage = () => {
         </form>
       </div>
 
-      {/* Error or Success Messages */}
       {error && <p style={styles.error}>{error}</p>}
       {successMessage && <p style={styles.success}>{successMessage}</p>}
     </div>
   );
 };
 
-// Simple inline styles for UI
 const styles = {
   container: {
     textAlign: 'center',

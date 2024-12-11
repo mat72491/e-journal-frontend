@@ -40,19 +40,17 @@ const WriteEntry = () => {
         })
         .then(response => {
             console.log('Journal entry created:', response.data);
-            setNotification('Journal entry submitted successfully!'); // Set success notification
+            setNotification('Journal entry submitted successfully!'); 
       
-            // Optionally reset form fields
             setTitle('');
             setEntry('');
             setSelectedTags([]);
-      
-            // Clear notification after 3 seconds
+    
             setTimeout(() => setNotification(''), 3000);
           })
           .catch(error => {
             console.error('Error creating journal entry:', error);
-            setNotification('Failed to submit journal entry. Please try again.'); // Error notification
+            setNotification('Failed to submit journal entry. Please try again.'); 
           });
         };
 
