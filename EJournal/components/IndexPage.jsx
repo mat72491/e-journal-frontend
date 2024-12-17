@@ -9,7 +9,7 @@ const IndexPage = () => {
     const fetchEntries = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('https://ejournal-0a426b220645.herokuapp.com/entries/', {
+        const response = await axios.get('http://127.0.0.1:8000/entries/', {
           headers: {
             Authorization: `Bearer ${token}`,
           },

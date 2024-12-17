@@ -18,7 +18,7 @@ const EditEntryPage = () => {
     const fetchEntry = async () => {
       try {
         const token = localStorage.getItem('token');
-        const entryResponse = await axios.get(`https://ejournal-0a426b220645.herokuapp.com/entries/${id}/`, {
+        const entryResponse = await axios.get(`http://127.0.0.1:8000/entries/${id}/`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

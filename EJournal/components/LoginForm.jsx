@@ -11,7 +11,7 @@ const LoginForm = (props) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('https://ejournal-0a426b220645.herokuapp.com/auth/login/', {
+      const response = await axios.post('http://127.0.0.1:8000/auth/login/', {
         username,
         password,
       });
