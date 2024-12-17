@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import LandingPage from '../components/LandingPage';
-import Dashboard from '../components/Dashboard';
-import WriteEntry from '../components/WriteEntry';
-import IndexPage from '../components/IndexPage';
-import EntryDetailPage from '../components/EntryDetailPage';
-import EditEntryPage from '../components/EditEntryPage';
-import PrivateRoute from '../components/PrivateRoute';
-import Navbar from '../components/Navbar';
+import LandingPage from '../EJournal/components/LandingPage';
+import Dashboard from '../EJournal/components/Dashboard';
+import WriteEntry from '../EJournal/components/WriteEntry';
+import IndexPage from '../EJournal/components/IndexPage';
+import EntryDetailPage from '../EJournal/components/EntryDetailPage';
+import EditEntryPage from '../EJournal/components/EditEntryPage';
+import PrivateRoute from '../EJournal/components/PrivateRoute';
+import Navbar from '../EJournal/components/Navbar';
 import './App.css';
 import axios from 'axios';
 
