@@ -9,14 +9,14 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchDashboardData = async () => {
       try {
-        const entriesResponse = await axios.get('http://127.0.0.1:8000/entries/', {
+        const entriesResponse = await axios.get('https://ejournal-0a426b220645.herokuapp.com/entries/', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`, 
           },
         });
         setEntriesCount(entriesResponse.data.length);
 
-        const tagsResponse = await axios.get('http://127.0.0.1:8000/tags/top/', {
+        const tagsResponse = await axios.get('https://ejournal-0a426b220645.herokuapp.com/tags/top/', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
@@ -24,7 +24,7 @@ const Dashboard = () => {
         setTopTags(tagsResponse.data);
 
 
-        const recentResponse = await axios.get('http://127.0.0.1:8000/entries/recent/', {
+        const recentResponse = await axios.get('https://ejournal-0a426b220645.herokuapp.com/entries/recent/', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },

@@ -10,7 +10,7 @@ const EntryDetailPage = () => {
   const fetchEntry = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get(`http://127.0.0.1:8000/entries/${id}/`, {
+      const response = await axios.get(`https://ejournal-0a426b220645.herokuapp.com/entries/${id}/`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -34,7 +34,7 @@ const EntryDetailPage = () => {
         return;
       }
 
-      await axios.delete(`http://127.0.0.1:8000/entries/${id}/delete/`, {
+      await axios.delete(`https://ejournal-0a426b220645.herokuapp.com/entries/${id}/delete/`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

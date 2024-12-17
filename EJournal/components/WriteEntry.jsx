@@ -10,7 +10,7 @@ const WriteEntry = () => {
     const [notification, setNotification] = useState('');
     
     useEffect(() => {
-        axios.get('http://127.0.0.1:8000/tags/')
+        axios.get('https://ejournal-0a426b220645.herokuapp.com/tags/')
             .then(response => {
                 setTagOptions(response.data);
             })
@@ -33,7 +33,7 @@ const WriteEntry = () => {
             tags: selectedTags,
         };
 
-        axios.post('http://127.0.0.1:8000/entries/create/', data, {
+        axios.post('https://ejournal-0a426b220645.herokuapp.com/entries/create/', data, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
             },

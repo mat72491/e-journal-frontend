@@ -18,7 +18,7 @@ const EditEntryPage = () => {
     const fetchEntry = async () => {
       try {
         const token = localStorage.getItem('token');
-        const entryResponse = await axios.get(`http://127.0.0.1:8000/entries/${id}/`, {
+        const entryResponse = await axios.get(`https://ejournal-0a426b220645.herokuapp.com/entries/${id}/`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -35,7 +35,7 @@ const EditEntryPage = () => {
     const fetchTags = async () => {
       try {
         const token = localStorage.getItem('token');
-        const tagsResponse = await axios.get('http://127.0.0.1:8000/tags/', {
+        const tagsResponse = await axios.get('https://ejournal-0a426b220645.herokuapp.com/tags/', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -76,7 +76,7 @@ const EditEntryPage = () => {
         tags: selectedTags, 
       };
 
-      const response = await axios.put(`http://127.0.0.1:8000/entries/${id}/edit/`, updatedEntry, {
+      const response = await axios.put(`https://ejournal-0a426b220645.herokuapp.com/entries/${id}/edit/`, updatedEntry, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
