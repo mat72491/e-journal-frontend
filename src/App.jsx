@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import LandingPage from '../components/LandingPage';
-import Dashboard from '../components/Dashboard';
-import WriteEntry from '../components/WriteEntry';
-import IndexPage from '../components/IndexPage';
-import EntryDetailPage from '../components/EntryDetailPage';
-import EditEntryPage from '../components/EditEntryPage';
-import PrivateRoute from '../components/PrivateRoute';
-import Navbar from '../components/Navbar';
+import LandingPage from './components/LandingPage';
+import Dashboard from './components/Dashboard';
+import WriteEntry from './components/WriteEntry';
+import IndexPage from './components/IndexPage';
+import EntryDetailPage from './components/EntryDetailPage';
+import EditEntryPage from './components/EditEntryPage';
+import PrivateRoute from './components/PrivateRoute';
+import Navbar from './components/Navbar';
 import './App.css';
 import axios from 'axios';
 
